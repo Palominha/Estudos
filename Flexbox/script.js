@@ -4,4 +4,5 @@ const menu = document.querySelector('.list-items');
 toggle.addEventListener('click', () => {
 
     menu.classList.toggle('active');
+
 });

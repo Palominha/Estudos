@@ -10,15 +10,17 @@
 
 <body>
     <header>
-        <div class="cont_ainer" id="menu">
+        <div class="cont_ainer menu" id="menu">
             <div>
                 <h1>FlexTurismos</h1>
             </div>
-            <ul class="list-items" id="nav-menu">
-                <li><a href="#quem-somos">Quem Somos</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#planos">Planos</a></li>
-            </ul>
+            <div class="nav">
+                <ul class="list-items">
+                    <li><a href="#q-somos">Quem Somos</a></li>
+                    <li><a href="#n-servicos">Serviços</a></li>
+                    <li><a href="#planos">Planos</a></li>
+                </ul>
+            </div>
 
             <div class="toggle">
                 <img src="./images/menu-nav.png" alt="">
@@ -27,11 +29,11 @@
     </header>
 
     <!-- Inicio -->
-    <div id="parte1" class="container">
+    <div id="parte1" class="parte1 container">
         <div class="text_part1">
             <h1>Flex <br>Turismos</h1>
             <p>O melhor serviço para você!</p>
-            <div id="btn">
+            <div id="btn" class="botao-p1">
                 <a href="">Saiba Mais!</a>
             </div>
         </div>
@@ -43,7 +45,7 @@
 
     <!-- Quem somos -->
 
-    <div id="quem-somos" class="container p_somos">
+    <div id="q-somos" class="container p_somos quem-somos">
 
         <div id="cont">
             <h2>Quem somos</h2>
@@ -53,19 +55,19 @@
                 to using 'Content here, content here', making it look like readable English.</p>
         </div>
 
-        <div>
+        <div class="img-somos">
             <img src="./images/1-quem-somos.png" alt="balcão de atendimento">
         </div>
     </div>
 
     <!-- Serviços -->
-    <div class="conteudo">
-        <div id="parte3" class="container">
+    <div class="conteudo" id="n-servicos">
+        <div id="parte3" class="container parte3">
             <div>
                 <h2>Serviços</h2>
             </div>
 
-            <div id="service">
+            <div id="service" class="service">
                 <div class="item-service">
                     <div>
                         <img src="./images/icon-2.png" alt="hospedagens">
@@ -96,7 +98,7 @@
 
     <!-- Planos -->
 
-    <div id="parte4" class="container">
+    <div id="planos" class="container parte4">
         <div>
             <h2>Planos</h2>
         </div>

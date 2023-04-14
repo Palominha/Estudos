@@ -17,8 +17,13 @@
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-
 }
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 30px;
+}
+
 
 ul {
     list-style: none;
@@ -60,7 +65,7 @@ header {
     z-index: 99;
 }
 
-header #menu {
+header .menu {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -86,7 +91,7 @@ header .list-items li a {
     color: var(--branco);
 }
 
-.toggle{
+.toggle {
     display: none;
     cursor: pointer;
     width: 30px;
@@ -99,28 +104,30 @@ header .list-items li a {
     transition: .5s;
 }
 
-#parte1 {
+.parte1 {
     display: flex;
     height: 100vh;
     align-items: center;
     justify-content: space-between;
 }
 
-#parte1 .text_part1 {
+.parte1 .text_part1 {
     min-height: 200px;
 }
 
-#parte1 .text_part1 h1 {
+.parte1 .text_part1 h1 {
     color: var(--azul-escuro);
     font-size: 46px;
     margin-bottom: 10px;
 }
 
-#parte1 .text_part1 .btn {
-    justify-content: center
+
+.text_part1 #btn {
+    display: flex;
+    justify-content: center;
 }
 
-#parte1 .text_part1 a {
+.parte1 .text_part1 a {
     background: var(--lanraja);
     text-decoration: none;
     color: var(--branco);
@@ -131,13 +138,12 @@ header .list-items li a {
     height: 30px;
     padding-top: 5px;
     max-width: 140px;
-    margin-left: 20%;
     margin-top: 10px;
     border: 2px solid var(--lanraja);
 }
 
 
-#parte1 .text_part1 a:hover {
+.parte1 .text_part1 a:hover {
     background-color: transparent;
     color: var(--lanraja);
     border: 2px solid var(--lanraja);
@@ -146,7 +152,7 @@ header .list-items li a {
     transition: .4s;
 }
 
-#quem-somos {
+.quem-somos {
     flex-direction: row-reverse;
 }
 
@@ -156,14 +162,14 @@ header .list-items li a {
     justify-content: space-between;
 }
 
-#quem-somos h2 {
+.quem-somos h2 {
     color: var(--azul-escuro);
     font-size: 30px;
     display: flex;
     margin-bottom: 20px;
 }
 
-#quem-somos h2::before {
+.quem-somos h2::before {
     content: "";
     height: 45px;
     width: 7px;
@@ -172,12 +178,12 @@ header .list-items li a {
     position: relative;
 }
 
-#quem-somos p {
+.quem-somos p {
     margin-bottom: 10px;
     width: 90%;
 }
 
-#quem-somos img {
+.quem-somos img {
     width: 520px;
 }
 
@@ -186,32 +192,32 @@ header .list-items li a {
     width: 100%;
 }
 
-#parte3 {
+.parte3 {
     flex-direction: column;
     padding: 50px 0 60px 0;
 }
 
-#parte3 h2 {
+.parte3 h2 {
     color: var(--branco);
     margin-bottom: 50px;
     font-size: 33px;
 }
 
-#service {
+.service {
     display: flex;
     justify-content: space-around;
 }
 
-#service .item-service {
+.service .item-service {
     text-align: center;
 }
 
-#service img:hover {
+.service img:hover {
     transition: .3s;
     filter: blur(0);
 }
 
-#service img{
+.service img {
     filter: blur(1.5px);
     transition: filter 0.3s ease-in-out;
 }
@@ -245,33 +251,34 @@ header .list-items li a {
     transition: .4s;
 }
 
-#parte4 {
+.parte4 {
     flex-direction: column;
     min-height: 100vh;
     padding-top: 50px;
 
 }
 
-#parte4 h2 {
+.parte4 h2 {
     font-size: 33px;
     color: var(--azul-escuro);
 }
 
-#parte4 .list-planos {
+.parte4 .list-planos {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
 }
 
-#parte4 .list-planos .item-plano {
+.parte4 .list-planos .item-plano {
     flex: 1;
     border: 5px solid var(--azul-escuro);
     margin-right: 20px;
     padding: 10px;
-    max-width: 250px;
+    max-width: 280px;
+    box-sizing: border-box;
 }
 
-#parte4 .list-planos .item-plano .p-botao {
+.parte4 .list-planos .item-plano .p-botao {
     background: var(--lanraja);
     text-decoration: none;
     color: var(--branco);
@@ -288,7 +295,7 @@ header .list-items li a {
     margin-bottom: 20px;
 }
 
-#parte4 .list-planos .item-plano .p-botao:hover {
+.parte4 .list-planos .item-plano .p-botao:hover {
     background-color: transparent;
     color: var(--lanraja);
     border: 2px solid var(--lanraja);
@@ -363,19 +370,19 @@ footer #footer- a {
 }
 
 @media (max-width: 992px) {
-    #parte1 {
+    .parte1 {
         margin-top: 130px;
     }
 }
 
 @media (max-width: 870px) {
 
-    #parte4 .list-planos {
+    .parte4 .list-planos {
         flex-direction: column;
         align-items: center;
     }
 
-    #parte4 .list-planos .item-plano {
+    .parte4 .list-planos .item-plano {
         margin-top: 20px;
         /* margin-bottom: 20px; */
     }
@@ -411,32 +418,32 @@ footer #footer- a {
         margin: 25px;
     }
 
-    #service {
+    .service {
         flex-direction: column;
         justify-content: center;
         align-items: center;
 
     }
 
-    #service img {
+    .service img {
         width: 300px;
         filter: blur(2px);
         transition: filter 0.3s ease-in-out;
     }
 
-    #service .item-service {
+    .service .item-service {
         margin-top: 100px;
     }
 
-    #nav-menu{
+    .nav .list-items {
         display: none;
     }
 
-    #menu .toggle{
-        display:block;
+    .menu .toggle {
+        display: block;
     }
 
-    .active .list-items{
+    .active.list-items {
         display: flex;
         flex-direction: column;
         position: absolute;
@@ -447,12 +454,24 @@ footer #footer- a {
         padding: 10px;
     }
 
-    .active li{
+    .active li {
         margin: 10px 0;
     }
 
-    .active li{
+    .active li {
         color: var(--branco);
     }
 
+    .list-items li a:hover {
+        color: var(--azul-escuro);
+        transition: .5s;
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .p_somos .img-somos img {
+        width: 100%;
+    }
 }
